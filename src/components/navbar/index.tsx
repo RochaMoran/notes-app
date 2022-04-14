@@ -1,28 +1,40 @@
 import "./styles.css";
-import { BiNotepad } from "react-icons/bi";
+import { BsTrash } from "react-icons/bs";
 import { IoIosAddCircle } from "react-icons/io";
 import { CgNotes } from "react-icons/cg";
+import { AiFillCaretDown } from "react-icons/ai";
+import { MdOutlineFavoriteBorder } from "react-icons/md";
 
 export default function NavBar() {
   return (
-    <nav className="nav bg-indigo-900">
+    <nav className="nav bg-slate-900">
       <ul>
         <li>
+          <img src="https://randomuser.me/api/portraits/men/23.jpg" alt="" />
+          <span className="text-white font-bold flex justify-center items-center">Juanito <AiFillCaretDown /></span>
+        </li>
+        <li>
           <a href="/">
-            <BiNotepad />
-            <h3>Notes</h3>
+            <MdOutlineFavoriteBorder />
+            <h3>Favoritos</h3>
           </a>
         </li>
         <li>
           <a href="/">
             <IoIosAddCircle />
-            <button>more</button>
+            <button>Crear</button>
           </a>
         </li>
         <li>
           <a href="/">
             <CgNotes />
-            <button>Notes</button>
+            <button>Notas</button>
+          </a>
+        </li>
+        <li>
+          <a href="/">
+            <BsTrash />
+            <button>Papelera</button>
           </a>
         </li>
       </ul>

@@ -4,11 +4,31 @@
     width: 200px;
 }
 
+.nav ul li:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    margin: 10px;
+}
+
+.nav ul li:first-child img {
+    width: 60px;
+    border-radius: 50%;
+}
+
 .nav ul li a {
     display: flex;
     align-items: center;
-    margin: 10px;
+    margin: 0 10px;
     color: white;
+    padding: 10px;
+    border-radius: 15px 0 0 15px;
+    transition: background-color .1s ease-in;
+}
+
+.nav ul li a:hover {
+    background-color: rgb(30 41 59);
 }
 
 .nav ul h3,
