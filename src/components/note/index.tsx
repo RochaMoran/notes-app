@@ -1,13 +1,7 @@
 import "./styles.css";
+import { noteInterface } from "../../helpers/const/interfaces";
 
-interface propsNote {
-  title: string;
-  description: string;
-  date: string;
-  priority?: string;
-}
-
-export default function Note({title, description, date, priority}:propsNote) {
+export default function Note({title, description, create_time, priority}:noteInterface) {
   return (
     <div className="text-white border-b border-slate-700 py-3">
       <h5 className="font-bold">{title}</h5>
@@ -16,7 +10,7 @@ export default function Note({title, description, date, priority}:propsNote) {
       </p>
       <div className="flex justify-between">
         <span className="text-xs block text-sky-300">{priority}</span>
-        <span className="text-xs block text-slate-400">{date.toString()}</span>
+        <span className="text-xs block text-slate-400">{create_time}</span>
       </div>
     </div>
   );
