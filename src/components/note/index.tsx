@@ -14,7 +14,10 @@ export default function Note({title, description, date, priority}:propsNote) {
       <p className="truncate text-slate-300">
         {description}
       </p>
-      <span className="text-xs block text-right text-slate-400">{date.toString()}</span>
+      <div className="flex justify-between">
+        <span className="text-xs block text-sky-300">{priority}</span>
+        <span className="text-xs block text-slate-400">{date.toString()}</span>
+      </div>
     </div>
   );
 }
