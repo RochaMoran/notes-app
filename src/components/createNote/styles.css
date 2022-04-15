@@ -1,39 +1,70 @@
 .create-note {
-    position: fixed;
-    left: 500px;
-    width: calc(100% - 500px);
-    height: 100vh;
+  position: fixed;
+  left: 500px;
+  width: calc(100% - 500px);
+  height: 100vh;
 }
 
 /* From uiverse.io by @alexmaracinaru */
 .save-note__button {
-    cursor: pointer;
-    font-weight: 700;
-    font-family: Helvetica,"sans-serif";
-    transition: all .2s;
-    padding: 0 8px;
-    border-radius: 100px;
-    background: #ffffff;
-    border: 1px solid transparent;
-    display: flex;
-    align-items: center;
-    font-size: 12px;
-   }
-   
-   .save-note__button:hover {
-    background: #ffffff;
-   }
-   
-   .save-note__button > svg {
-    width: 24px;
-    margin-left: 10px;
-    transition: transform .3s ease-in-out;
-   }
-   
-   .save-note__button:hover svg {
-    transform: translateX(5px);
-   }
-   
-   .save-note__button:active {
-    transform: scale(0.95);
-   }
+  cursor: pointer;
+  font-weight: 700;
+  font-family: Helvetica, "sans-serif";
+  transition: all 0.2s;
+  padding: 0 8px;
+  border-radius: 100px;
+  background: #ffffff;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+
+.save-note__button:hover {
+  background: #ffffff;
+}
+
+.save-note__button > svg {
+  width: 24px;
+  margin-left: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.save-note__button:hover svg {
+  transform: translateX(5px);
+}
+
+.save-note__button:active {
+  transform: scale(0.95);
+}
+
+@media screen and (max-width: 850px) {
+    .create-note {
+        left: 385px;
+        width: calc(100% - 385px);
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .create-note {
+        left: 220px;
+        width: calc(100% - 220px);
+    }
+
+    .save-note__button {
+        padding: 15px 5px;
+        height: 25px;
+        font-size: .7rem;
+    }
+
+    .save-note__button > svg {
+        width: 18px;
+    }
+}
+
+@media screen and (max-width: 570px) { 
+    .create-note {
+        left: 200px;
+        width: calc(100% - 200px);
+    }
+}

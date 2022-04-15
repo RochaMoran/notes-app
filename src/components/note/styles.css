@@ -1,0 +1,12 @@
+@media screen and (max-width: 570px) {
+    .note .font-bold {
+        font-size: .8rem;
+    }
+    .note p {
+        font-size: .8rem;
+    }
+
+    .note .flex span {
+        font-size: .6rem;
+    }
+}

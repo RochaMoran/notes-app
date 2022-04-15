@@ -36,7 +36,7 @@ export default function ContainerNotes() {
         <MdEventNote className="ml-2" />
       </div>
       <div className="my-3.5 flex justify-between text-white border-b border-slate-600 py-1">
-        4 notas encontradas
+        <p className="notes-results">{notes && `${notes.length} notas encontradas`}</p>
         <div>
           <button>
             <AiOutlineFilter />
