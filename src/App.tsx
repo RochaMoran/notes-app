@@ -1,16 +1,22 @@
-import './styles/App.css';
-import NavBar from './components/navbar';
-import ContainerNotes from './components/containerNotes';
-import CreateNote from './components/createNote';
+import "./styles/App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { routes } from "./pages/data";
+import { appState } from "./helpers/const/interfaces";
 
-function App() {
+export default function MyRoutes() {
+  const isLogged: boolean = false;
+
   return (
-    <div className='app'>
-      <NavBar />
-      <ContainerNotes />
-      <CreateNote />
-    </div>
+    <Router>
+      <Routes>
+        {isLogged
+          ? routes.auth.map((route: appState["itemRoute"], i: number) => (
+              <Route key={i} path={route.path} element={<route.element />} />
+            ))
+          : routes.root.map((route: appState["itemRoute"], i: number) => (
+              <Route key={i} path={route.path} element={<route.element />} />
+            ))}
+      </Routes>
+    </Router>
   );
 }
-
-export default App;

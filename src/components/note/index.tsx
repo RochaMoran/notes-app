@@ -1,7 +1,7 @@
 import "./styles.css";
-import { noteInterface } from "../../helpers/const/interfaces";
+import { appState } from "../../helpers/const/interfaces";
 
-export default function Note({title, description, create_time, priority}:noteInterface) {
+export default function Note({title, description, create_time, priority}:appState["note"]) {
   return (
     <div className="text-white border-b border-slate-700 py-3 note">
       <h5 className="font-bold">{title}</h5>

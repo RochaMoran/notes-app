@@ -5,10 +5,10 @@ import Note from "../note";
 import { useEffect, useState } from "react";
 import { collection, query, getDocs } from "firebase/firestore";
 import { db } from "../../firebase/client";
-import { noteInterface } from "../../helpers/const/interfaces";
+import { appState } from "../../helpers/const/interfaces";
 
 export default function ContainerNotes() {
-  const [notes, setNotes] = useState<noteInterface[]>([]);
+  const [notes, setNotes] = useState<appState["note"][]>([]);
 
   useEffect(() => {
     const getNotes = async () => {
@@ -45,7 +45,7 @@ export default function ContainerNotes() {
       </div>
       <div>
         {notes ? (
-          notes.map((note: noteInterface) => (
+          notes.map((note: appState["note"]) => (
             <Note
               id={note.id}
               title={note.title}
