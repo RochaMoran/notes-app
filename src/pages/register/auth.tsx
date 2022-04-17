@@ -8,10 +8,12 @@ function Auth() {
   const [classAuth, setClassAuth] = useState<string>("");
 
   return (
-    <div className={`${classAuth} container`} id="container">
-      <Register setClassAuth={setClassAuth} />
-      <Login setClassAuth={setClassAuth} />
-      <Overlay setClassAuth={setClassAuth} />
+    <div className="body">
+      <div className={`${classAuth} container`} id="container">
+        <Register setClassAuth={setClassAuth} />
+        <Login setClassAuth={setClassAuth} />
+        <Overlay setClassAuth={setClassAuth} />
+      </div>
     </div>
   );
 }
