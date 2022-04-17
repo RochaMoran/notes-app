@@ -1,5 +1,5 @@
-import Home from './home'
-import Register from './register/register'
+import Home from './home/home'
+import Register from './register/auth'
 import { appState } from '../helpers/const/interfaces'
 
 export const routes:appState["routes"] = {
