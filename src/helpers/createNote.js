@@ -17,3 +17,17 @@ export const createNote = yup
       .required("Se requiere el tipo de prioridad para la nota")
   })
   .required();
+
+export const authSchema = yup
+  .object({
+    email: yup
+      .string()
+      .required("Favor, ingrese su correo electronico")
+      .email("Ingresa una direccion de correo valida"),
+    password: yup
+      .string()
+      .required("Se requiere tu contraseña")
+      .min(7, "Su contraseña debe tener un minimo de 7 caracteres")
+      .max(255, "Su contraseña debe tener un maximo de 255 caracteres"),
+  })
+  .required();

@@ -2,9 +2,10 @@ import "./styles/App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { routes } from "./pages/data";
 import { appState } from "./helpers/const/interfaces";
+import useUser from "./components/hooks/useUser";
 
 export default function MyRoutes() {
-  const isLogged: boolean = false;
+  const { isLogged } = useUser()
 
   return (
     <Router>
